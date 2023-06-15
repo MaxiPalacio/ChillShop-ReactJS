@@ -19,7 +19,7 @@ function App() {
       <h1>ChillShop</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+          el numero es {count}
         </button>
         <p>
           Bienvenidos a ReactJS :)
