@@ -2,11 +2,20 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { bienvenida , despedida} from './saludo.js'
+import Tutores from './ejemplos/Tutores'
 
 function App() {
   const [count, setCount] = useState(0)
 
+  // bienvenida()
+  // despedida()
+  const nombre = 'ChillShop'
+  const direc = 'Urrutia'
+
+
   return (
+    
     <>
       <div>
         <a href="https://vitejs.dev" target="_blank">
@@ -16,7 +25,9 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>ChillShop</h1>
+      <h1>{nombre}</h1>
+      <h2>{direc}</h2>
+      < Tutores />
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           el numero es {count}
