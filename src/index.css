@@ -127,6 +127,64 @@ transition: 0.4s;
   color: rgb(255, 9, 9);
   cursor: pointer;
 }
+/*Estilos DropDown navbar*/
+nav {
+  background-color: #333;
+  padding: 10px;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-logo a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.navbar-menu button {
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #444;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  top: 11%;
+  right: 8%;
+  width: 120px;
+  border-radius: 5px;
+}
+
+.dropdown-menu li {
+  margin-bottom: 5px;
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 1.3rem;
+}
+/* Estilo para el dropdown abierto */
+
+.navbar-menu.open .dropdown-menu {
+  display: flex;
+}
+
+
 /*Estilos cards*/
 .main-container{
   margin: 4% 0 0 15%;
