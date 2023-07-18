@@ -1,19 +1,57 @@
+import { useEffect, useState } from "react"
+import { pedirDatos } from "../helpers/pedirDatos"
+import { useParams } from "react-router-dom"
 
- const Card = ({url, nombre, desc, precio} ) => {
+
+ const Card = () => {
+
+  const [productos, setProductos] = useState([])
+  const [loading, setLoading ] = useState(true)
+
+  const { categoriaId } = useParams()
+
+    useEffect(() => {
+      setLoading(true)
+
+        pedirDatos()
+            .then(r => {
+              if(categoriaId) { 
+
+                setProductos( r.filter(prod => prod.categoria == categoriaId ) )
+
+              } else {
+
+                setProductos(r)
+                
+              }
+            })
+            .catch(e => console.log(e))
+            .finally(() => setLoading(false))
+    },[categoriaId])
+
 
     return(
-        <div className="cards">
-          <img src={url} alt="" />
+<>
 
-            <h3 className="product-name">{nombre}</h3>
+  { 
+    loading? (<p style={{textAlign: 'center', fontSize:'3rem'}} >Cargando...</p>)
+    : productos.map((prod) => (
+      <div className="cards" key={prod.id}>
+        <img src={prod.img} alt={prod.nombre} />
 
-            <p className="product-detail">{desc}</p>
+          <h3 className="product-name">{prod.nombre}</h3>
 
-            <p><span>$</span><span className="product-cost">{precio}</span></p>
+          <p className="product-detail">{prod.desc}</p>
 
-            <div className="buy-btn">Agregar al carrito</div>
+          <p><span>$</span><span className="product-cost">{prod.precio}</span></p>
 
-        </div>
-    )
+          <div className="buy-btn">Agregar al carrito</div>
+
+      </div>
+    ))
+ }
+</>
+      
+)
 }
 export default Card

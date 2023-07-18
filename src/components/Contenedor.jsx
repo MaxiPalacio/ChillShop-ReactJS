@@ -1,10 +1,8 @@
-
-
 export const Contenedor = ({children}) =>{
-    
-    return(
+
+   return(
         <div className="main-container">
-            {children}
+            {children}        
         </div>
     )
 }

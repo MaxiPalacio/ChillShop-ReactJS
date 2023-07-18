@@ -1,6 +1,9 @@
-import  Card  from './components/Card.jsx';
-import { Contenedor } from './components/Contenedor';
-import { Header } from './components/Header';
+
+import Card from './components/Card.jsx';
+import { Contenedor } from './components/Contenedor.jsx';
+import { Header } from './components/Header.jsx';
+import { Contacto } from './components/Contacto.jsx';
+import { BrowserRouter, Routes,Route, Navigate } from 'react-router-dom';
 
 
 
@@ -10,20 +13,21 @@ function App() {
 
   return (
     
-    <>
+    <BrowserRouter>
       <Header/>
-    
-        <Contenedor>   
-          
-          <Card url='/src/assets/ruedas1.png' nombre='Spitfire' desc='Ruedas Spitfire 54mm' precio={1500}/>
-          <Card url='/src/assets/tabla1.png' nombre='Element' desc='Tabla Element 8.5' precio={4000}/>
-          <Card url='/src/assets/Trucks1.png' nombre='Lab' desc='Trucks Lab 139mm' precio={2500}/>
-          
-        </Contenedor>
+
+      <Routes>
+        <Route path='/contacto' element={ <Contacto/> } />
+        <Route path='/productos/:categoriaId' element={ <Contenedor> <Card/> </Contenedor> }/>
+        <Route path='*' element={ <Navigate to='/'/> } />
+        <Route path='/' element = { <Contenedor> <Card/> </Contenedor> }/>
+        
+      </Routes>
+  
+        
+    </BrowserRouter>
 
 
-
-    </>
   )
 }
 
