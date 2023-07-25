@@ -3,7 +3,6 @@ import './ItemDetail.scss'
 import { CartContext } from '../../context/CartContext'
 import { Link } from 'react-router-dom'
 import { ItemCount } from '../ItemCount/ItemCount'
-import { Button } from 'react-bootstrap'
 
 export const ItemDetail = ({item})  => {
     const { agregarAlCarrito, isInCart } = useContext(CartContext)
