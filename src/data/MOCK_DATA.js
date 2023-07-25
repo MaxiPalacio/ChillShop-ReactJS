@@ -5,7 +5,7 @@ export const MOCK_DATA = [
         desc:"Ruedas Spitfire 54mm",
         precio: 5000,
         categoria: "ruedas",
-        img: "../assets/ruedas1.png",
+        img: "../public/ruedas1.png",
         stock: 6,
     
     
@@ -16,7 +16,7 @@ export const MOCK_DATA = [
         desc:"Tabla Element 8.5"
        , precio: 10000,
        categoria: "tablas",
-       img: "../assets/tabla1.png",
+       img: "../public/tabla1.png",
        stock: 8,
     
     
@@ -27,7 +27,7 @@ export const MOCK_DATA = [
         desc:"Trucks Lab 139mm",
         precio: 15000,
         categoria: "trucks",
-        img: "../assets/Trucks1.png",
+        img: "../public/Trucks1.png",
         stock: 6,
     
     
@@ -38,7 +38,7 @@ export const MOCK_DATA = [
         desc:"Trucks Independent 149mm",
         precio: 25000,
         categoria: "trucks",
-        img: "../assets/trucks2.png",
+        img: "../public/trucks2.png",
         stock: 10,
     
     
@@ -49,7 +49,7 @@ export const MOCK_DATA = [
         desc:"Tabla completa ELement 8",
         precio: 30000,
         categoria: "tablas",
-        img: "../assets/tabla2.png",
+        img: "../public/tabla2.png",
         stock: 10,
     
     
@@ -60,7 +60,7 @@ export const MOCK_DATA = [
         desc:"Rulemanes Red Bones Abec 7",
         precio: 4500,
         categoria: "rulemanes",
-        img: "../assets/ruleman1.png",
+        img: "../public/ruleman1.png",
         stock: 15,
     
     
@@ -71,7 +71,7 @@ export const MOCK_DATA = [
         desc:"Ruedas Spitfire 54mm",
         precio: 5245,
         categoria: "ruedas",
-        img: "../assets/ruedas2.png",
+        img: "../public/ruedas2.png",
         stock: 13,
     
     
@@ -82,7 +82,7 @@ export const MOCK_DATA = [
         desc:"Tabla Daga 8.5",
         precio: 8500,
         categoria: "tablas",
-        img: "../assets/tabla3.png",
+        img: "../public/tabla3.png",
         stock: 11,
     
     
@@ -93,7 +93,7 @@ export const MOCK_DATA = [
         desc:"Rulemanes Red Bones ceramicos Abec 9",
         precio: 8000,
         categoria: "rulemanes",
-        img: "../assets/ruleman2.png",
+        img: "../public/ruleman2.png",
         stock: 9,
     
     
@@ -104,7 +104,7 @@ export const MOCK_DATA = [
         desc:"Lija Lab",
         precio: 2000,
         categoria: "lijas",
-        img: "../assets/lija.png",
+        img: "../public/lija.png",
         stock: 20,
     
     
