@@ -1,31 +1,37 @@
 
-import Card from './components/Card.jsx';
-import { Contenedor } from './components/Contenedor.jsx';
+import { ItemListContainer } from './components/ItemListContainer/ItemListContainer.jsx';
 import { Header } from './components/Header.jsx';
 import { Contacto } from './components/Contacto.jsx';
-import { BrowserRouter, Routes,Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { CartProvider } from './context/CartContext.jsx';
+import { CartView } from './components/CartView/CartView.jsx';
+import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer.jsx';
 
 
 
 function App() {
-
-
-
-  return (
-    
-    <BrowserRouter>
-      <Header/>
-
-      <Routes>
-        <Route path='/contacto' element={ <Contacto/> } />
-        <Route path='/productos/:categoriaId' element={ <Contenedor> <Card/> </Contenedor> }/>
-        <Route path='*' element={ <Navigate to='/'/> } />
-        <Route path='/' element = { <Contenedor> <Card/> </Contenedor> }/>
-        
-      </Routes>
   
-        
-    </BrowserRouter>
+  return (
+
+   <CartProvider>
+
+      <BrowserRouter>
+        <Header/>
+
+        <Routes>
+          <Route path='/contacto' element={ <Contacto/> } />
+          <Route path='/carrito' element={ <CartView/> }/>
+          <Route path='/productos/:categoriaId' element={ <ItemListContainer/>}/>
+          <Route path='/detalle/:itemId' element={ <ItemDetailContainer/> }/>
+          <Route path='/' element = { <ItemListContainer/> }/>
+          <Route path='*' element={ <Navigate to='/'/> } />
+          
+        </Routes>
+    
+          
+      </BrowserRouter>
+
+   </CartProvider>
 
 
   )
