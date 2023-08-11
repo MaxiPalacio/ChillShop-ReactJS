@@ -1,0 +1,57 @@
+.itemMainContainer{
+    width: 65%;
+    height: 75vh;
+    background-color: rgba(255, 255, 255, 0.813);
+    margin: 3% auto;
+    display: flex;
+
+}
+.itemImg{
+    padding: 5%;
+    width: 55%;
+}
+.itemContainer{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.itemTitle{
+    font-size: 5rem;
+    font-weight: 500;
+    margin: 70px auto;
+}
+.itemPrice{
+    font-size: 4rem;
+    font-weight: 400;
+    margin-left: 8px;
+}
+.itemCuotas{
+    font-size: 1.2rem;
+    margin-left: 20px;
+    margin-top: -10px;
+}
+.itemDesc{
+    margin-top: 40px;
+    margin-left: 12px;
+    font-size: 1.8rem;
+    
+}
+.itemStock{
+    font-size: 1.2rem;
+    color: rgb(255, 0, 0);
+    margin-top: px;
+    margin-left: 13px;
+}
+.botonPagar{
+    width: 92%;
+    height: 9%;
+    background-color: rgb(95, 242, 95);
+    border: none;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto auto;
+    cursor: pointer;
+}
